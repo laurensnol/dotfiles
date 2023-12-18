@@ -1,0 +1,52 @@
+import:
+  - ~/.config/alacritty/themes/onedark.yml
+
+window:
+  dimensions:
+    columns: 200
+    lines: 55
+
+  padding:
+    x: 14
+    y: 10
+
+  resize_increments: true
+  # option_as_alt: OnlyLeft
+
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: ExtraBold
+
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: ExtraBold Italic
+
+  size: 13.0
+
+  offset:
+    x: 0
+    y: 3
+
+shell:
+  program: /opt/homebrew/bin/tmux
+  args:
+    - new-session
+    - -A
+    - -s
+    - main
+
+mouse:
+  hide_when_typing: true
+
+debug:
+  persistent_logging: true
+  log_level: Warn
