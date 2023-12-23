@@ -46,13 +46,7 @@ cmp.setup {
 
     ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
-    ["<Esc>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.mapping.abort()
-      else
-        fallback()
-      end
-    end),
+    ["<Esc>"] = cmp.mapping.abort(),
   },
   sources = cmp.config.sources {
     { name = "nvim_lsp" },
