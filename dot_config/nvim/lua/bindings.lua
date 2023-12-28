@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- [a]
     vim.keymap.set("n", "<leader>ar", vim.lsp.buf.rename, opts)
     vim.keymap.set("n", "<leader>af", function() vim.lsp.buf.format() end, opts)
-    vim.keymap.set("n", "<leader>ac", function() vim.lsp.buf.action() end, opts)
+    vim.keymap.set("n", "<leader>ac", function() vim.lsp.buf.code_action() end, opts)
 
     -- [d]
     vim.keymap.set("n", "<leader>ds", vim.diagnostic.open_float, opts)
