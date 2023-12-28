@@ -2,13 +2,13 @@
 --[[
 
 Prefixes:
- - a: action
- - d: diagnostic
- - e: (file) explorer
- - f: find
- - g: go to
- - G: git
- - s: show
+ - a  : action
+ - d  : diagnostic
+ - e  : (file) explorer
+ - F/f: find
+ - g  : go to
+ - G  : git
+ - s  : show
 
 --]]
 -----------------------------
@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- [a]
     vim.keymap.set("n", "<leader>ar", vim.lsp.buf.rename, opts)
     vim.keymap.set("n", "<leader>af", function() vim.lsp.buf.format() end, opts)
+    vim.keymap.set("n", "<leader>ac", function() vim.lsp.buf.action() end, opts)
 
     -- [d]
     vim.keymap.set("n", "<leader>ds", vim.diagnostic.open_float, opts)
@@ -45,8 +46,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -----------------------------
 -- telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>F", builtin.git_files, {})
+vim.keymap.set("n", "<leader>f", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fw", builtin.live_grep, {})
 
 -----------------------------
