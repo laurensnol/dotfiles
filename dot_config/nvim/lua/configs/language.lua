@@ -72,3 +72,16 @@ require("mason-lspconfig").setup {
     "html", "cssls", "tsserver",
   },
 }
+
+-----------------------------
+-- mfussenegger/nvim-lint
+require("lint").linters_by_ft = {
+  cpp = {"cppcheck",},
+  hpp = {"cppcheck",},
+}
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function ()
+    require("lint").try_lint()
+  end,
+})
