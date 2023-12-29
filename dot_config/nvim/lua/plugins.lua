@@ -8,6 +8,7 @@ require("lazy").setup {
   { "williamboman/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
   { "mfussenegger/nvim-lint" },
+  { "mfussenegger/nvim-dap" },
 
   -- Autocomplete
   { "windwp/nvim-autopairs", event = "InsertEnter" },

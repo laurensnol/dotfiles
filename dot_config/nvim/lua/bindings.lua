@@ -4,6 +4,7 @@
 Prefixes:
  - a  : action
  - d  : diagnostic
+ - D  : debug
  - e  : (file) explorer
  - F/f: find
  - g  : go to
@@ -62,10 +63,18 @@ vim.keymap.set("n", "<leader>G", neogit.open, {});
 
 -----------------------------
 -- diffview.nvim
-vim.keymap.set("n", "<leader>Gd", function ()
+vim.keymap.set("n", "<leader>Gd", function()
   if next(require("diffview.lib").views) == nil then
     vim.cmd("DiffviewOpen")
   else
     vim.cmd("DiffviewClose")
   end
 end)
+
+-----------------------------
+-- nvim-dap
+vim.keymap.set("n", "<leader>Dr", function() require("dap").continue() end)
+vim.keymap.set("n", "<leader>Db", function() require("dap").toggle_breakpoint() end)
+vim.keymap.set("n", "<leader>Di", function() require("dap").step_into() end)
+vim.keymap.set("n", "<leader>Do", function() require("dap").step_over() end)
+vim.keymap.set("n", "<leader>DO", function() require("dap").step_out() end)
