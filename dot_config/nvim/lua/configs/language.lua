@@ -86,6 +86,9 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePost" }, {
   end,
 })
 
+local cppcheck = require("lint.linters.cppcheck")
+table.insert(cppcheck.args, "--suppress=missingIncludeSystem")
+
 -----------------------------
 -- mfussenegger/nvim-dap
 local dap = require("dap")
