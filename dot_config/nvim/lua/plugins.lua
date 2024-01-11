@@ -23,7 +23,6 @@ require("lazy").setup {
   -- Other
   { "nvim-tree/nvim-tree.lua" },
   { "nvim-telescope/telescope.nvim", tag = "0.1.4" },
-  { "nvim-lualine/lualine.nvim" },
   { "folke/todo-comments.nvim" },
   {
     "iamcco/markdown-preview.nvim",
@@ -41,6 +40,7 @@ require("lazy").setup {
   -- Styling
   { "navarasu/onedark.nvim" },
   { "nvim-tree/nvim-web-devicons" },
+  { "nvim-lualine/lualine.nvim" },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
 }
 

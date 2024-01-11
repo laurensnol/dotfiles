@@ -3,17 +3,6 @@
 require("nvim-tree").setup {}
 
 -----------------------------
--- nvim-lualine/lualine.nvim
-require("lualine").setup {
-  options = {
-    theme = "onedark",
-    component_seperators = { left = ' ', right = ' ' },
-    --section_separators = { left = '', right = '' },
-    disabled_filetypes = { "NvimTree" },
-  },
-}
-
------------------------------
 -- folke/todo-comments.nvim
 require("todo-comments").setup {}
 

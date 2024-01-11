@@ -13,6 +13,16 @@ od.setup {
 od.load()
 
 -----------------------------
+-- nvim-lualine/lualine.nvim
+require("lualine").setup {
+  options = {
+    section_separators = '',
+    component_separators = '',
+    disabled_filetypes = { "NvimTree" },
+  },
+}
+
+-----------------------------
 -- lukas-reineke/indent-blankline.nvim
 require("ibl").setup {
   indent = {
