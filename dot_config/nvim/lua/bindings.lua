@@ -17,6 +17,18 @@ Prefixes:
 vim.g.mapleader = " "
 
 -----------------------------
+-- Convenience
+vim.keymap.set("x", "<Tab>", function()
+  vim.api.nvim_command('normal >>')
+  vim.api.nvim_command('normal gv')
+end, {})
+
+vim.keymap.set("x", "<S-Tab>", function()
+  vim.api.nvim_command('normal <<')
+  vim.api.nvim_command('normal gv')
+end, {})
+
+-----------------------------
 -- nvim-lspconfig
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
