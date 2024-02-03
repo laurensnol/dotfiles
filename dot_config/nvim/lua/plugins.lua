@@ -30,7 +30,7 @@ require("lazy").setup {
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
-  { "simrat39/rust-tools.nvim" },
+  { 'mrcjkb/rustaceanvim', version = '^3' },
   { "akinsho/flutter-tools.nvim" },
   { "lewis6991/gitsigns.nvim" },
   --{ "tpope/vim-fugitive" },

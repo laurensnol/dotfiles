@@ -48,7 +48,7 @@ local handlers = {
       }
   end,
 
-  ["rust_analyzer"] = function ()
+  --[["rust_analyzer"] = function ()
     require("rust-tools").setup {
       server = {
         settings = {
@@ -61,7 +61,7 @@ local handlers = {
         },
       },
     }
-  end
+  end]]
 }
 
 require("mason-lspconfig").setup {
