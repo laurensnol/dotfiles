@@ -34,3 +34,8 @@ require("ibl").setup {
     highlight = { "Comment" },
   },
 }
+
+-----------------------------
+-- highlight group overrides
+vim.api.nvim_set_hl(0, "@type.qualifier.cpp", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "@storageclass.cpp", { link = "Keyword" })
