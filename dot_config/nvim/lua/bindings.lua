@@ -59,9 +59,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -----------------------------
 -- telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>F", builtin.git_files, {})
-vim.keymap.set("n", "<leader>f", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fw", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>f", builtin.git_files, {})
+vim.keymap.set("n", "<leader>Ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>Fw", builtin.live_grep, {})
 
 -----------------------------
 -- NvimTree
