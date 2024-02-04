@@ -1,6 +1,3 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwplugin = 1
-
 vim.opt.updatetime = 50
 
 vim.opt.termguicolors = true
@@ -29,3 +26,8 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
+
+vim.g.netrw_keepdir = 0
+vim.g.netrw_winsize = 50
+vim.g.netrw_banner = 0
+vim.g.netrw_localcopydircmd = "cp -r"

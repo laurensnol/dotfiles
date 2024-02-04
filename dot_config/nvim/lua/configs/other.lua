@@ -1,8 +1,4 @@
 -----------------------------
--- nvim-tree/nvim-tree.lua
-require("nvim-tree").setup {}
-
------------------------------
 -- folke/todo-comments.nvim
 require("todo-comments").setup {}
 

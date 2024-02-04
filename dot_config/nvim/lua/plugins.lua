@@ -21,7 +21,6 @@ require("lazy").setup {
   { "saadparwaiz1/cmp_luasnip" },
 
   -- Other
-  { "nvim-tree/nvim-tree.lua" },
   { "nvim-telescope/telescope.nvim", tag = "0.1.4" },
   { "folke/todo-comments.nvim" },
   {

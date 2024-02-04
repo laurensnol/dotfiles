@@ -17,7 +17,7 @@ Prefixes:
 vim.g.mapleader = " "
 
 -----------------------------
--- Convenience
+-- indentation
 vim.keymap.set("x", "<Tab>", function()
   vim.api.nvim_command('normal >>')
   vim.api.nvim_command('normal gv')
@@ -27,6 +27,32 @@ vim.keymap.set("x", "<S-Tab>", function()
   vim.api.nvim_command('normal <<')
   vim.api.nvim_command('normal gv')
 end, {})
+
+-----------------------------
+-- netrw
+vim.keymap.set("n", "<leader>ee", ":Lexplore<CR>", {})
+vim.keymap.set("n", "<leader>eh", ":Hexplore<CR>", {})
+vim.keymap.set("n", "<leader>eH", ":Sexplore<CR>", {})
+vim.keymap.set("n", "<leader>ev", ":Vexplore!<CR>", {})
+vim.keymap.set("n", "<leader>eV", ":Vexplore", {})
+
+-----------------------------
+-- windows
+vim.keymap.set("n", "<leader>ws", function()
+  vim.cmd("vs")
+  vim.cmd("wincmd l")
+
+  require("telescope.builtin").find_files()
+end)
+
+vim.keymap.set("n", "<leader>wS", function()
+  vim.cmd("sp")
+  vim.cmd("wincmd j")
+
+  require("telescope.builtin").find_files()
+end)
+
+vim.keymap.set("n", "<leader>wr", ":vert res 86<CR>", {})
 
 -----------------------------
 -- nvim-lspconfig
@@ -59,14 +85,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 -----------------------------
 -- telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>f", builtin.git_files, {})
-vim.keymap.set("n", "<leader>Ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>Fw", builtin.live_grep, {})
-
------------------------------
--- NvimTree
-vim.keymap.set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>E", "<Cmd>NvimTreeFocus<CR>")
+vim.keymap.set("n", "<leader>ff", builtin.git_files, {})
+vim.keymap.set("n", "<leader>fF", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fw", builtin.live_grep, {})
 
 -----------------------------
 -- NeogitOrg/neogit
