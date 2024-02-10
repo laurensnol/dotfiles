@@ -49,32 +49,35 @@ return {
       "mason.nvim"
     },
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities {}
       require("mason-lspconfig").setup_handlers {
         function(server_name)
-          require("lspconfig")[server_name].setup {}
+          require("lspconfig")[server_name].setup {
+            capabilities = capabilities,
+          }
+        end,
+        ["rust_analyzer"] = function() end,
+        ["hls"] = function() end,
+        ["lua_ls"] = function()
+          local lspconfig = require("lspconfig")
+          lspconfig.lua_ls.setup {
+            capabilities = capabilities,
+            settings = {
+              Lua = {
+                diagnostics = {
+                  globals = { "vim" },
+                },
+              },
+            },
+          }
         end
       }
 
       require("mason-lspconfig").setup {
         ensure_installed = {
           "jsonls", "texlab", "marksman",
-          "lua_ls", "clangd", "rust_analyzer", "pyright",
+          "lua_ls", "clangd", --[["rust_analyzer",]] "pyright",
           "html", "cssls", "tsserver"
-        },
-        handlers = {
-          ["rust_analyzer"] = function() end,
-          ["lua_ls"] = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup {
-              settings = {
-                Lua = {
-                  diagnostics = {
-                    globals = { "vim" },
-                  },
-                },
-              },
-            }
-          end
         },
       }
     end

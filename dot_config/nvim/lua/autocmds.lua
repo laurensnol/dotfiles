@@ -9,8 +9,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- mfussenegger/nvim-lint
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+vim.api.nvim_create_autocmd("BufWritePost", {
   callback = function()
     require("lint").try_lint()
+  end,
+})
+
+-- mrcjkb/haskell-tools.nvim
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.hs", "*.hls" },
+  callback = function()
+    require("haskell-tools").lsp.start()
   end,
 })
