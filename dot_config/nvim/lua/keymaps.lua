@@ -33,6 +33,7 @@ vim.keymap.set("n", "<leader>ff", require("telescope.builtin").git_files, {})
 vim.keymap.set("n", "<leader>fa", require("telescope.builtin").find_files, {})
 vim.keymap.set("n", "<leader>fw", require("telescope.builtin").live_grep, {})
 
+vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, {})
 vim.keymap.set("n", "<leader>fc", require("telescope.builtin").commands, {})
 vim.keymap.set("n", "<leader>fq", require("telescope.builtin").quickfix, {})
 
