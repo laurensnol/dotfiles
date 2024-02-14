@@ -165,9 +165,9 @@ return {
           { name = "nvim_lsp" },
           { name = "luasnip" },
         },
-        --{
-        --  { name = "buffer" },
-        --},
+        {
+          { name = "buffer" },
+        },
         experimental = {
           ghost_text = true,
         },
