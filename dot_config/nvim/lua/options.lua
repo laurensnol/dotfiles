@@ -34,3 +34,5 @@ vim.g.netrw_winsize = 50
 vim.g.netrw_banner = 0
 vim.g.netrw_localcopydircmd = "cp -r"
 vim.g.netrw_list_hide = ".DS_Store,^./$"
+-- Enable line numbers in netrw
+vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
