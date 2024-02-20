@@ -9,6 +9,10 @@ vim.keymap.set("x", "<S-Tab>", function()
   vim.api.nvim_command('normal gv')
 end, {})
 
+-- switch buffers
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", {})
+vim.keymap.set("n", "<S-Tab>", ":bprev<CR>", {})
+
 -- a: [a]ction
 local function setup_lsp_a(opts)
   vim.keymap.set("n", "<leader>ar", vim.lsp.buf.rename, opts)
