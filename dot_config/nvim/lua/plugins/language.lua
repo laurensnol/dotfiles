@@ -8,7 +8,7 @@ return {
       require("nvim-treesitter.configs").setup {
         ensure_installed = {
           "vim", "vimdoc", "query", "json", "latex", "markdown",
-          "lua", "c", "cpp", "rust", "python",
+          "lua", "c", "cpp", "rust", "python", "cmake",
           "html", "css", "javascript", "typescript"
         },
         auto_install = false,
@@ -76,7 +76,7 @@ return {
       require("mason-lspconfig").setup {
         ensure_installed = {
           "jsonls", "texlab", "marksman",
-          "lua_ls", "clangd", --[["rust_analyzer",]] "pyright",
+          "lua_ls", "clangd", "pyright", "cmake",
           "html", "cssls", "tsserver"
         },
       }
